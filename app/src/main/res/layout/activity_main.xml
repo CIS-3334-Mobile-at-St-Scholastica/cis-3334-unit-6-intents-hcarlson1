@@ -64,10 +64,104 @@
             android:layout_height="wrap_content"
             android:id="@+id/button1map"
             android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/spotlightchoir"
+            android:id="@+id/imageButton2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CSS Choirs at Home Thursday, March 2, 2017, 7:30 – 9:30 p.m. Mitchell Auditorium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="WEB INFO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonWebChoir"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="ADD TO CALENDAR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCalendarChoir"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="MAP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonMapChoir"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/spotlightchildren"
+            android:id="@+id/imageButton3" />
+
+        <TextView
+            android:text="The Secret Life of Children Saturday, March 4, 2017, 7:30 p.m. Mitchell Auditorium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="WEB INFO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonWebChild"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="ADD TO CALENDAR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCalendarChild"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="MAP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonMapChild"
+            android:layout_weight="1" />
+
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textViewStatus" />
+
 </LinearLayout>
