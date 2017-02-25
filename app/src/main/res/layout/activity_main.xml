@@ -81,7 +81,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CSS Choirs at Home Thursday, March 2, 2017, 7:30 – 9:30 p.m. Mitchell Auditorium" />
+            android:text="CSS Choirs at Home\nThursday, March 2, 2017, 7:30 – 9:30 p.m.\nMitchell Auditorium" />
 
     </LinearLayout>
 
@@ -124,7 +124,7 @@
             android:id="@+id/imageButton3" />
 
         <TextView
-            android:text="The Secret Life of Children Saturday, March 4, 2017, 7:30 p.m. Mitchell Auditorium"
+            android:text="The Secret Life of Children\nSaturday, March 4, 2017, 7:30 p.m.\nMitchell Auditorium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />

@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void setupButtonClickEvents() {
+        //===================================================================================================================================================
         /**
          *   Set up button click event listener for the web info button for the first performance
          */
@@ -88,16 +89,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+//=======================================================================================================================================================================
         /**
          *   Set up button click event listener for the web info button for the second performance
          */
-        btnChoirWeb = (Button) findViewById(R.id.button1WebInfo);
+        btnChoirWeb = (Button) findViewById(R.id.buttonWebChoir);
         btnChoirWeb.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Do something in response to button click
-                // Do something in response to button click
-                textViewStatus.setText("Code should display website for performance 1");
+                textViewStatus.setText("Code should display website for performance 2");
                 Uri webpage = Uri.parse("http://www.css.edu/about/spotlight-arts-and-lectures/calendar.html?trumbaEmbed=eventid%3d119983186%26view%3devent%26-childview%3d");
                 Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
                 if (intent.resolveActivity(getPackageManager()) != null) {
@@ -110,11 +110,11 @@ public class MainActivity extends AppCompatActivity {
          *   Set up button click event listener for the celendar button for the second performance
          *       Use the calendar intent to set an event reminder on the calendar
          */
-        btnChoirCalendar = (Button) findViewById(R.id.button1Calendar);
+        btnChoirCalendar = (Button) findViewById(R.id.buttonCalendarChoir);
         btnChoirCalendar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Do something in response to button click
-                textViewStatus.setText("Code should set a calendar event for performance 1");
+                textViewStatus.setText("Code should set a calendar event for performance 2");
                 Intent calIntent = new Intent(Intent.ACTION_INSERT);
                 calIntent.setType("vnd.android.cursor.item/event");
                 calIntent.putExtra(CalendarContract.Events.TITLE, "CSS Choirs at Home");
@@ -137,9 +137,65 @@ public class MainActivity extends AppCompatActivity {
         btnChoirMap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Do something in response to button click
-                textViewStatus.setText("Code should display map for performance 1");
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                Uri webpage = Uri.parse("geo:46.8165111,-92.1064653");
+                textViewStatus.setText("Code should display map for performance 2");
+                Uri uri = Uri.parse("geo:46.8161879,-92.1065962");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
+            }
+        });
+//=====================================================================================================================================================
+        /**
+         *   Set up button click event listener for the web info button for the second performance
+         */
+        btnChildWeb = (Button) findViewById(R.id.buttonWebChild);
+        btnChildWeb.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Do something in response to button click
+                textViewStatus.setText("Code should display website for performance 3");
+                Uri webpage = Uri.parse("http://www.css.edu/about/spotlight-arts-and-lectures/calendar.html?trumbaEmbed=eventid%3d119983357%26view%3devent%26-childview%3d");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
+            }
+        });
+
+        /**
+         *   Set up button click event listener for the celendar button for the second performance
+         *       Use the calendar intent to set an event reminder on the calendar
+         */
+        btnChildCalendar = (Button) findViewById(R.id.buttonCalendarChild);
+        btnChildCalendar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Do something in response to button click
+                textViewStatus.setText("Code should set a calendar event for performance 3");
+                Intent calIntent = new Intent(Intent.ACTION_INSERT);
+                calIntent.setType("vnd.android.cursor.item/event");
+                calIntent.putExtra(CalendarContract.Events.TITLE, "The Secret Life of Children");
+                calIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, "Mitchell Auditorium");
+                GregorianCalendar begDate = new GregorianCalendar(2017, 3, 4, 19, 30);
+                GregorianCalendar endDate = new GregorianCalendar(2017, 3, 4, 21, 30);
+                calIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                        begDate.getTimeInMillis());
+                calIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                        endDate.getTimeInMillis());
+                startActivity(calIntent);
+
+            }
+        });
+
+        /**
+         *   Set up button click event listener for the web info button for the first performance
+         */
+        btnChildMap = (Button) findViewById(R.id.buttonMapChild);
+        btnChildMap.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Do something in response to button click
+                textViewStatus.setText("Code should display map for performance 3");
+                Uri uri = Uri.parse("geo:46.8165111,-92.1064653");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }
